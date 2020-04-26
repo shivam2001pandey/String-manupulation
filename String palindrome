@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int test;
+	cin>>test;
+	while(test--)
+    {
+        int length,flag=1;
+        cin>>length;
+        
+        char b[length];
+        string str;
+        cin>>str;
+        for(int i=0,j=str.size()-1;i<str.size()/2;i++,j--)
+        {
+           if(str[i]!=str[j])
+           {
+               flag=0;cout<<"No"<<endl;break;
+           }
+        }
+        if(flag==1)  cout<<"Yes"<<endl;
+        
+            
+    }	
+
+	return 0;
+}

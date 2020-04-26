@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//code
+	int test;
+	cin>>test;
+	while(test--)
+	{
+	    string str;
+	    cin>>str;
+	    for(int i=0;i<str.length();)
+	    {
+	        int j=i+1;
+	        while(str[j]!='.'&& j<str.length()) j++;
+	        int temp=j-1;
+	       if(str[i]=='.')
+	       { cout<<".";
+	        while(temp>i)
+	            {cout<<str[temp];temp--;}
+	       }
+	       else    
+	       while(temp>=i)
+	            {cout<<str[temp];temp--;}
+
+	        i=j;
+	    }
+	    cout<<endl;
+      
+	    
+	}
+	return 0;
+}
